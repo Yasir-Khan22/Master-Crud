@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "phone": 4908,
+      "email": "TortaNavidena@gmail.com",
+      "name": "Torta Navideña",
+      "id": 2
+    },
+    {
+      "name": "Flan - Quesillo",
+      "price": 10000,
+      "email": "Flanquesillo@gmail.com",
+      "phone": 12345,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "majarete",
+      "phone": 2900,
+      "email": "majarate@gmail.com"
+    },
+    {
+      "phone": 1234,
+      "email": "abc@gmail.com",
+      "name": "yasir",
+      "id": 5
+    },
+    {
+      "phone": 39393939,
+      "email": "admin@graffitecs.com",
+      "name": "yasir",
+      "id": 6
+    },
+    {
+      "phone": 30987654,
+      "email": "yasir@gmail.com",
+      "name": "yasir",
+      "id": 7
+    },
+    {
+      "phone": 3938383,
+      "email": "ASIR@GMAIL.COM",
+      "name": "yasir",
+      "id": 8
+    },
+    {
+      "phone": 123456,
+      "email": "Gujjar2.0@gmail.com",
+      "name": "Gujjar2.0",
+      "id": 9
+    }
+  ]
+}
