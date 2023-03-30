@@ -1,52 +1,52 @@
 {
   "users": [
     {
-      "phone": 4908,
-      "email": "TortaNavidena@gmail.com",
-      "name": "Torta Navideña",
+      "phone": 404,
+      "email": "arsalan@gmail.com",
+      "name": "arsalaan",
       "id": 2
     },
     {
-      "name": "Flan - Quesillo",
+      "name": "nawazish",
       "price": 10000,
-      "email": "Flanquesillo@gmail.com",
+      "email": "nawazish@gmail.com",
       "phone": 12345,
       "id": 3
     },
     {
       "id": 4,
-      "name": "majarete",
+      "name": "adeel",
       "phone": 2900,
-      "email": "majarate@gmail.com"
+      "email": "adeel@gmail.com"
     },
     {
       "phone": 1234,
       "email": "abc@gmail.com",
-      "name": "yasir",
+      "name": "Salahuddin ayoubi",
       "id": 5
     },
     {
       "phone": 39393939,
-      "email": "admin@graffitecs.com",
-      "name": "yasir",
+      "email": "xyz@gmail.com",
+      "name": "Khalid bin waleed",
       "id": 6
     },
     {
       "phone": 30987654,
-      "email": "yasir@gmail.com",
-      "name": "yasir",
+      "email": "amir@gmail.com",
+      "name": "amiri",
       "id": 7
     },
     {
       "phone": 3938383,
-      "email": "ASIR@GMAIL.COM",
+      "email": "yasir@gmail.com",
       "name": "yasir",
       "id": 8
     },
     {
-      "phone": 123456,
-      "email": "Gujjar2.0@gmail.com",
-      "name": "Gujjar2.0",
+      "phone": 1234567,
+      "email": "ali@gmail.com",
+      "name": "ali",
       "id": 9
     }
   ]
