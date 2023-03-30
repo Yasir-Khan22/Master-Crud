@@ -13,7 +13,7 @@ function Users() {
     });
   }, []);
 
-  console.log(user);
+
   return (
     <>
       <div className="h-full w-full flex flex-col mt-32 justify-center items-center">

@@ -20,7 +20,7 @@ function Edit() {
   })
 
   // const [data, setData] = useState();
-  const { register, reset, handleSubmit, formState: { errors }, control } = useForm({ resolver: yupResolver(Schema) });
+  const { reset, handleSubmit, formState: { errors }, control } = useForm({ resolver: yupResolver(Schema) });
 
   // const fetchSingle = async () => {
   //   const res = await axios.get(`http://localhost:3010/users/${id}`)

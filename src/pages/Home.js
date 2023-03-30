@@ -8,7 +8,7 @@ function Home() {
   const queryClient = useQueryClient();
 
   // fetchUser function wwhich is fetching data from endpoint and then you can log it.
-  const fetchUsers = () => axios.get("http://localhost:3010/users").then(((res) => res.data), console.log(data))
+  const fetchUsers = () => axios.get("http://localhost:3010/users").then(((res) => res.data))
 
   // imported useQuery hook with the following properties.
   const { data, isLoading, error } = useQuery(["users"], fetchUsers);
