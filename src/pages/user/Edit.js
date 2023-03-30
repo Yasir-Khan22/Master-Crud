@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useQuery, useMutation } from "@tanstack/react-query";
@@ -20,7 +20,7 @@ function Edit() {
   })
 
   // const [data, setData] = useState();
-  const { register, reset, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(Schema) });
+  const { register, reset, handleSubmit, formState: { errors }, control } = useForm({ resolver: yupResolver(Schema) });
 
   // const fetchSingle = async () => {
   //   const res = await axios.get(`http://localhost:3010/users/${id}`)
@@ -68,34 +68,86 @@ function Edit() {
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">
       <h2 className="text-2xl font-bold">User Details</h2>
       <form onSubmit={handleSubmit(mutate)} className="w-[50%] h-full flex flex-col mt-2">
-        <input
+
+        {/* <input
 
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           placeholder="Enter your name"
           {...register("name")}
 
+        /> */}
+
+        {/* NAME INPUT FIELD FOR CONTROLLER. */}
+
+        <Controller
+          name="name"
+          control={control}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="text"
+              placeholder="Enter your name"
+            />
+          )}
         />
 
         <span className="text-sm text-red-700">
           {errors?.name?.message}
         </span>
 
-        <input
+        {/* <input
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           type="email"
           placeholder="Enter your email"
           {...register("email")}
+        /> */}
+
+        {/* EMAIL INPUT FIELD FOR CONTROLLER. */}
+
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="text"
+              placeholder="Enter your email"
+            />
+          )}
         />
 
         <span className="text-sm text-red-700">
           {errors?.email?.message}
         </span>
 
-        <input
+        {/* <input
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           type="phone"
           placeholder="Enter your phone no."
           {...register("phone")}
+        /> */}
+
+        {/* PHONE INPUT FIELD FOR CONTROLLER. */}
+
+        <Controller
+          name="phone"
+          control={control}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="tel"
+              placeholder="Enter your phone number"
+            />
+          )}
         />
 
         <span className="text-sm text-red-700">

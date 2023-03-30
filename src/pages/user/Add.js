@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useForm, Controller, control } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useMutation } from "@tanstack/react-query";
@@ -19,7 +19,7 @@ function Add() {
   })
 
   // useForm function/hook is used with the following properties.
-  const { register, handleSubmit, formState: { errors }
+  const { handleSubmit, formState: { errors }, control
   } = useForm({ resolver: yupResolver(Schema) });
 
   // useMutation Hook called.
@@ -43,50 +43,84 @@ function Add() {
       <h2 className="text-2xl font-bold">ADD USER</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="w-[50%] h-full flex flex-col mt-2">
 
-        <input
+        {/* <input
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           type="text"
           placeholder="Enter your name"
           {...register("name")}
-        />
+        /> */}
 
-        {/* <Controller
+        {/* NAME INPUT FIELD FOR CONTROLLER.*/}
+
+        <Controller
+          name="name"
           control={control}
-          name="test"
-          render={({
-            field: { onChange, onBlur, value, name, ref },
-            fieldState: { invalid, isTouched, isDirty, error },
-            formState,
-          }) => (
-            <Checkbox
-              onBlur={onBlur} // notify when input is touched
-              onChange={onChange} // send value to hook form
-              checked={value}
-              inputRef={ref}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="text"
+              placeholder="Enter your name"
             />
           )}
-        /> */}
+        />
 
         <span className="text-sm text-red-700">
           {errors?.name?.message}
         </span>
 
-        <input
+        {/* <input
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           type="email"
           placeholder="Enter your email"
           {...register("email")}
+        /> */}
+
+        {/* EMAIL INPUT FIELD FOR CONTROLLER. */}
+
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="email"
+              placeholder="Enter your email"
+            />
+          )}
         />
 
         <span className="text-sm text-red-700">
           {errors?.email?.message}
         </span>
 
-        <input
+        {/* <input
           className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
           type="phone"
           placeholder="Enter your phone no."
           {...register("phone")}
+        /> */}
+
+        {/* PHONE INPUT FIELD FOR CONTROLLER. */}
+
+        <Controller
+          name="phone"
+          control={control}
+          defaultValue=""
+          rules={{ required: true }}
+          render={({ field }) => (
+            <input
+              {...field}
+              className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
+              type="tel"
+              placeholder="Enter your phone number"
+            />
+          )}
         />
 
         <span className="text-sm text-red-700">
