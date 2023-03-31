@@ -33,7 +33,7 @@ function Edit() {
     return res.data;
   });
 
-  console.log("dataa", data)
+
 
 
   // useEffect(() => {
