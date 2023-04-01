@@ -1,15 +1,6 @@
-FreeGeoIP for Laravel 4 
-=======================
-
 
 [![Latest Stable Version](https://poser.pugx.org/buonzz/laravel-4-freegeoip/v/stable.svg)](https://packagist.org/packages/buonzz/laravel-4-freegeoip)
 [![License](https://poser.pugx.org/buonzz/laravel-4-freegeoip/license.svg)](https://packagist.org/packages/buonzz/laravel-4-freegeoip)
-
-
-In contrary to all other packages wherein it requires that you have the geoip database in your filesystem, this library calls a free service
-So you dont really have to worry about downloading and maintaining geoip data from Maxmind in your own server.
-
-Just install the package, add the config and it is ready to use!
 
 
 Requirements
