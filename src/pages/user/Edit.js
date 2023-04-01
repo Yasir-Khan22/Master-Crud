@@ -157,7 +157,7 @@ function Edit() {
         </span>
 
         <button
-          className="bg-teal-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
+          className="bg-[#55423d] outline-none font-bold border text-[#ffc0ad] border-zinc-400 py-4 pl-4 mt-4"
           type="submit"
         >
           UPDATE USER

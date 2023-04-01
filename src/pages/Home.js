@@ -153,9 +153,9 @@ function Home() {
                         <td className="text-sm flex justify-between  items-center text-gray-900 font-bold px-6 py-4 space-x-4 whitespace-nowrap">
                           <Link
                             to={`/users/${user.id}`}
-                            className="bg-teal-600 text-white px-6 py-2 rounded-lg"
+                            className="bg-[#55423d] text-[#ffc0ad] px-6 py-2 rounded-lg"
                           >
-                            VIew
+                            View
                           </Link>
                           <Link
                             to={`/edit-user/${user.id}`}
