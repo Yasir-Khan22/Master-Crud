@@ -19,8 +19,14 @@ function Edit() {
       .required()
   })
 
-  // const [data, setData] = useState();
   const { reset, handleSubmit, formState: { errors }, control } = useForm({ resolver: yupResolver(Schema) });
+
+  const { data } = useQuery(['singleUser', id], async () => {
+    const res = await axios.get(`http://localhost:3010/users/${id}`);
+    return res.data;
+  });
+
+  // const [data, setData] = useState();
 
   // const fetchSingle = async () => {
   //   const res = await axios.get(`http://localhost:3010/users/${id}`)
@@ -28,18 +34,7 @@ function Edit() {
   // }
 
   // SingleUser is unique identifier.
-  const { data } = useQuery(['singleUser', id], async () => {
-    const res = await axios.get(`http://localhost:3010/users/${id}`);
-    return res.data;
-  });
 
-
-
-
-  // useEffect(() => {
-  //   fetchSingle();
-
-  // }, [id]);
 
   const { mutate } = useMutation(
     async (data) => {
@@ -58,6 +53,13 @@ function Edit() {
       reset(data)
     }
   }, [data, reset])
+
+
+  // useEffect(() => {
+  //   fetchSingle();
+
+  // }, [id]);
+
 
   // function Update(data) {
   //   // e.preventDefault();
